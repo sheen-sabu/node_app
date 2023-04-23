@@ -18,4 +18,5 @@ jobs:
           REMOTE_USER: ${{ secrets.USERNAME }}
           TARGET: ${{ secrets.TARGET_DIR }}
       - name: Checkout the files
+        run: cd /home/ec2-user
         run: docker-compose up -d
