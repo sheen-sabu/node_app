@@ -34,4 +34,4 @@ jobs:
           SSH_USER: ${{ secrets.USERNAME }}
           SSH_KEY: ${{ secrets.EC2_SSH_KEY }}
       - name: List home directory
-        run: ssh ec2 'docker compose -f /home/ec2-user/docker-compose.yml up --build -d'
+        run: ssh ec2 'docker compose -f /home/ec2-user/docker-compose.yml restart --build -d'
