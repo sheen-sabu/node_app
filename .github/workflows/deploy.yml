@@ -19,3 +19,5 @@ jobs:
           TARGET: ${{ secrets.TARGET_DIR }}
       - name: Checkout the files
         run: pwd
+      - name: user
+        run: whoami
