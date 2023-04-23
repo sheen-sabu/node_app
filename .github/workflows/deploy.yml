@@ -18,4 +18,4 @@ jobs:
           REMOTE_USER: ${{ secrets.USERNAME }}
           TARGET: ${{ secrets.TARGET_DIR }}
       - name: Checkout the files
-        run: docker compose -f /home/ec2-user/docker-compose.yml up -d
+        run: pwd
