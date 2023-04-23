@@ -10,9 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout the files
-        uses: actions/checkout@v2
-        run: docker-compose up -d
       - name: Deploy to Server 1
         uses: easingthemes/ssh-deploy@main
         env:
@@ -20,3 +17,5 @@ jobs:
           REMOTE_HOST: ${{ secrets.HOST_DNS }}
           REMOTE_USER: ${{ secrets.USERNAME }}
           TARGET: ${{ secrets.TARGET_DIR }}
+      - name: Checkout the files
+        run: docker-compose up -d
