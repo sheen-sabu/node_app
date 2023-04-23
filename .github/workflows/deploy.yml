@@ -17,7 +17,5 @@ jobs:
           REMOTE_HOST: ${{ secrets.HOST_DNS }}
           REMOTE_USER: ${{ secrets.USERNAME }}
           TARGET: ${{ secrets.TARGET_DIR }}
-      - name: Checkout the files
-        run: pwd
-      - name: user
-        run: whoami
+          script: |
+            docker compose -f /home/ec2-user/docker-compose.yml up -d
